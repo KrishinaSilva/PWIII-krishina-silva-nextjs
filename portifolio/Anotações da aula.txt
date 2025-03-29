@@ -1,0 +1,43 @@
+O next.js é um ecossistema node que usa javascript e é parecido com o laravel, tendo soluções pré-instaladas como o laravel  e um framework react, ele faz coisas rotineiras de API´S como consultas, cadastros, rotas etc. de um framework.
+
+
+Iniciando o Node.js
+
+- abra o site nextjs.org
+- documentação - https://nextjs.org/docs
+- nessa página https://nextjs.org/docs/app/getting-started/layouts-and-pages, copia o código, na documentação da page.tsx apaga as informações e cola o código copiado na documentação que vai reiniciar o react
+- é necessário ter o node atualizado na máquina
+- clonar repositório na máquina (https://github.com/KrishinaSilva/PWIII-krishina-silva-nextjs.git)
+- code .
+- Comando de criação do projeto (npx create-next-app@latest)
+- clica y, dá o nome para o projeto, clica em yes - typescript, clica em desabilitar o corretor - eslint(corretor), clica em yes para ativar o bootstrap tailwild CSS, clica em não para não deixar o src/ directory e clica em yes para o app router, yes para interface mais amigável e clica em não para o import alias.
+
+Iniciando o servidor
+
+- o Readme.md do projeto faz um tutorial dos comandos básicos, caso não tivesse só é usar o documento package.json 
+- entra na pasta do projeto
+- digite no prompt npm run dev para iniciar o servidor
+- ctrl + clique do mouse em cima do http://localhost:3000 que vc vai ser direcionado para o navegador 
+- o site que cria está dentro do documento page.tsx
+- o index.html = page.tsx
+- vai dentro do projeto na pasta app e cria uma pasta chamada teste e dentro dela cria o page.tsx
+- na aba do navegador digite \nomedapasta(teste) e ela vai criar uma rota - - você cria a pasta com o nome da sua rota
+- no site na página inicial clica em deploy e loga com o github
+- autoriza a versel com o git hub
+
+Versel - autoriza o site na web
+
+- clica em install na aba de instalar repositorio que vai baixar todos os repositórios
+- clica em import do repositório do next do github
+- da o nome que você quiser
+- escolhe o framework next.js, na root directory clica em edit e escolhe o portifolio e clica em deploy
+- posso comprar um dominio, adiconar previews etc
+- digita na web https://pwiii-krishina-silva-nextjs.vercel.app/ que vai aparecer o seu site
+
+estamos trabalhando na branch main e isso não é o correto temos que trabalhar com os braços e depois mandar pra main e fazer o deploy
+
+HACKS
+
+- git branch (significa que o gitbash está habilitado para todas as máquinas)
+- não usar o gitbash pq é o que mais da erro
+- ctrl + " abre o terminal do vscode
