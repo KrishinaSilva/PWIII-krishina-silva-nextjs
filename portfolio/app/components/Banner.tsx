@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 
 const ArrowRightCircle = () => (
   <svg
@@ -13,7 +14,7 @@ const ArrowRightCircle = () => (
   >
     <path
       fillRule="evenodd"
-      d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 o 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5 0 1 0-.708.708L10.293 7.5z"
+      d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 o 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5 0 1 0-.708.708L10.293 7.5z"
     />
   </svg>
 );
@@ -22,9 +23,7 @@ export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
-  // Acelerando a digitação: reduzindo o valor inicial do delta
-  // Um valor menor significa ticks mais rápidos.
-  const [delta, setDelta] = useState(150 - Math.random() * 50); // Ajustado de 300 para 150
+  const [delta, setDelta] = useState(150 - Math.random() * 50);
   const [index, setIndex] = useState(1);
   const toRotate = ["Futura Astrofísica"];
   const period = 2000;
@@ -45,14 +44,13 @@ export const Banner = () => {
     setText(updatedText);
 
     if (isDeleting) {
-      // Quando apaga, a velocidade é dividida por 2, mantendo rápido.
       setDelta(prevDelta => prevDelta / 2);
     }
 
     if (!isDeleting && updatedText === fullText) {
       setIsDeleting(true);
       setIndex(prevIndex => prevIndex - 1);
-      setDelta(period); // Período que fica visível (2000ms = 2s)
+      setDelta(period);
     } else if (isDeleting && updatedText === '') {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
@@ -81,13 +79,28 @@ export const Banner = () => {
               <h1> 
                 {`Olá! Eu sou a `}
                 <span className="text-blue-400">Krishina Borges</span>{" "}
-                <span className="txt-rotate" data-period="1000" data-rotate='[ "Futura Astrofísica" ]'> {/* toRotate já foi atualizado */}
-                  <span className="wrap">{text}</span> {/* Aplica a classe CSS 'wrap' */}
+                <span className="txt-rotate" data-period="1000" data-rotate='[ "Futura Astrofísica" ]'>
+                  <span className="wrap">{text}</span>
                 </span>
               </h1>
               <p>
-                Embarquei na jornada do desenvolvimento web para explorar os vastos e complexos sistemas de código, construindo experiências digitais que brilham como as estrelas. Minha paixão me impulsiona a desvendar novos horizontes no universo da tecnologia.
+                Técnica em Desenvolvimento de Sistemas apaixonada por Astronomia. <br />
+                <strong className="text-purple-300 font-semibold">
+                  Desenvolvo soluções de programação científica
+                </strong> para análise de dados astronômicos, simulações computacionais e processamento de imagens do universo.
               </p>
+              {/* ÍCONES DE REDES SOCIAIS */}
+              <div className="social-icons-banner mt-8 flex justify-center md:justify-start space-x-6">
+                <a href="https://github.com/KrishinaSilva" target="_blank" rel="noopener noreferrer"
+                   className="text-white hover:text-purple-300 transition-colors duration-300">
+                  <FaGithub size={35} />
+                </a>
+                <a href="https://br.linkedin.com/in/krishina-borges-960aa8264" target="_blank" rel="noopener noreferrer"
+                   className="text-white hover:text-purple-300 transition-colors duration-300">
+                  <FaLinkedinIn size={35} />
+                </a>
+              </div>
+              {/* FIM DOS NOVOS ÍCONES */}
             </div>
           </div>
           <div className="w-full md:w-5/12 flex justify-center md:justify-end">

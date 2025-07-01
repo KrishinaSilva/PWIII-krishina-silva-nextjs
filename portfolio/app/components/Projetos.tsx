@@ -6,45 +6,57 @@ import Image from 'next/image';
 
 export const Projetos = () => {
   const projects = [
-    {
+        {
       id: 1,
-      title: "Sistema de Gerenciamento de Estrelas",
-      description: "Um aplicativo web para catalogar e visualizar dados de estrelas e constelações.",
-      image: "/project-star.svg", // Substitua por imagens reais dos seus projetos
-      link: "#", // Link para o projeto online
-      repo: "#" // Link para o repositório no GitHub
+      title: "RedeMãeAutista",
+      description: "Uma aplicação mobile desenvolvida para dar suporte a mães e responsáveis por crianças autistas.",
+      image: "/logo.png",
+      link: "https://www.google.com",
+      repo: "https://github.com/leticiaglendy/RedeMaeAutista"
     },
     {
       id: 2,
-      title: "Simulador de Órbitas Planetárias",
-      description: "Ferramenta interativa para simular o movimento de corpos celestes no espaço.",
-      image: "/project-orbit.svg",
-      link: "#",
-      repo: "#"
+      title: "Sistema de Gerenciamento de Estrelas",
+      description: "Um aplicativo web feito para catalogar e visualizar dados de estrelas e constelações.",
+      image: "/em-breve.jpg",
+      link: "https://www.google.com",
+      repo: "https://github.com/SEU_USUARIO/SEU_REPOSITORIO_ESTRELAS"
     },
     {
-        id: 3,
+      id: 3,
+      title: "Simulador de Órbitas Planetárias",
+      description: "Ferramenta interativa desenvolvida para simular o movimento de corpos celestes no espaço.",
+      image: "/em-breve.jpg",
+      link: "https://www.google.com",
+      repo: "https://github.com/SEU_USUARIO/SEU_REPOSITORIO_CALCULADORA"
+    },
+    {
+        id: 4,
         title: "Calculadora Astronômica",
         description: "Uma calculadora que realiza cálculos astrodinâmicos básicos e conversões de unidades.",
-        image: "/project-calc.svg",
-        link: "#",
-        repo: "#"
+        image: "/em-breve.jpg",
+        link: "https://www.google.com",
+        repo: "https://github.com/SEU_USUARIO/SEU_REPOSITORIO_CALCULADORA"
       },
   ];
 
   return (
-    <section className="py-20 bg-gray-900 text-white" id="projetos">
+    <section className="project" id="projetos">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center mb-12">Meus Projetos</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <h2>Meus Projetos</h2>
+        <p>
+            Aqui você encontrará uma seleção dos meus trabalhos mais recentes, que demonstram minhas habilidades e minha paixão pelo desenvolvimento web. Cada projeto é uma jornada de aprendizado e inovação.
+        </p>
+        
+        <div className="project-cards-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8">
           {projects.map((project) => (
-            <div key={project.id} className="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div key={project.id} className="proj-imgbx bg-gray-800 p-5 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
               <Image
                 src={project.image}
                 alt={project.title}
                 width={300}
                 height={200}
-                className="w-full h-48 object-cover rounded-md mb-4"
+                className="w-full h-40 object-cover rounded-md mb-4"
               />
               <h3 className="text-2xl font-semibold mb-2">{project.title}</h3>
               <p className="text-gray-300 mb-4">{project.description}</p>

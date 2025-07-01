@@ -24,7 +24,7 @@ export const Navbar = () => {
       }
 
       //links de rolagem na navegação
-      const sections = ['home', 'sobremim', 'projetos', 'academico', 'contact']; // IDs das suas seções
+      const sections = ['home', 'tecnologias', 'projetos', 'academico', 'contact']; // IDs das suas seções
       let currentActive = 'home';
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = document.getElementById(sections[i]);
@@ -47,7 +47,7 @@ export const Navbar = () => {
     const targetElement = document.getElementById(linkName);
     if (targetElement) {
       window.scrollTo({
-        top: targetElement.offsetTop - 60, // Ajusta para a altura da navbar fixa
+        top: targetElement.offsetTop - 60, // altura da navbar fixa
         behavior: 'smooth'
       });
     }
@@ -56,11 +56,6 @@ export const Navbar = () => {
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-purple-900 shadow-lg' : 'bg-transparent py-4'}`}>
       <div className="container mx-auto px-6 flex justify-between items-center h-16">
-        {/* Logo - Clicar no logo leva para o topo da página */}
-        <Link href="#home" onClick={(e) => handleNavLinkClick('home', e)}>
-          <Image src="/logo.svg" alt="Logo" width={100} height={40} className="h-10" />
-        </Link>
-
         {/* Links de Navegação */}
         <div className="hidden md:flex space-x-8">
           <Link href="#home"
@@ -68,10 +63,10 @@ export const Navbar = () => {
                 onClick={(e) => handleNavLinkClick('home', e)}>
             Início
           </Link>
-          <Link href="#sobremim"
-                className={`text-white text-lg hover:text-purple-300 transition-colors ${activeLink === 'sobremim' ? 'font-bold border-b-2 border-purple-300' : ''}`}
-                onClick={(e) => handleNavLinkClick('sobremim', e)}>
-            Sobre Mim
+          <Link href="#tecnologias"
+                className={`text-white text-lg hover:text-purple-300 transition-colors ${activeLink === 'tecnologias' ? 'font-bold border-b-2 border-purple-300' : ''}`}
+                onClick={(e) => handleNavLinkClick('tecnologias', e)}>
+            Tecnologias
           </Link>
           <Link href="#projetos"
                 className={`text-white text-lg hover:text-purple-300 transition-colors ${activeLink === 'projetos' ? 'font-bold border-b-2 border-purple-300' : ''}`}
@@ -89,7 +84,7 @@ export const Navbar = () => {
         <div className="hidden md:block">
           <Link href="#contact" onClick={(e) => handleNavLinkClick('contact', e)}>
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-full hover:from-blue-600 hover:to-purple-700 transition-all duration-300 shadow-lg">
-              Vamos Conectar
+              Entre em Contato
             </button>
           </Link>
         </div>
