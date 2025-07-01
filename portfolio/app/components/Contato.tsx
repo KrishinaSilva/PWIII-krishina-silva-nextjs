@@ -10,7 +10,7 @@ export const Contato = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Formulário enviado:', { name, email, message });
-    alert('Mensagem enviada! (Isso é um alerta de demonstração, substitua por um modal customizado)');
+    alert('Mensagem enviada!'); //* lembrar de deixar funcional
     setName('');
     setEmail('');
     setMessage('');
