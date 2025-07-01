@@ -1,0 +1,413 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/************ Banner Css ************/
+.banner {
+  margin-top: 0;
+  /*padding-top de espaço abaixo da navbar fixa*/
+  padding: 100px 0 100px 0;
+  background-image: url('/assets/images/banner-bg.png');
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.banner .tagline {
+  /*mensagem 'Bem-vindo ao meu portifólio'*/
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  padding: 8px 10px;
+  background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+  font-size: 20px;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+  /*Frase móvel*/
+.banner h1 {
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  line-height: 1;
+  margin-bottom: 20px;
+  display: block;
+}
+  /*Texto de apresentação*/
+.banner p {
+  color: #B8B8B8;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  width: 96%;
+}
+.banner button:hover svg {
+  margin-left: 25px;
+}
+.banner img {
+  animation: updown 3s linear infinite;
+}
+@keyframes updown {
+    0% {
+        transform: translateY(-20px);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
+.txt-rotate > .wrap {
+  border-right: 0.08em solid #666;
+}
+
+/************ Tecnologias Css ************/
+
+.skill {
+  position: relative;
+  background-image: url('/assets/images/color-sharp.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #121212;
+  min-height: 500px;
+  display: flex;
+  align-items: center; 
+}
+.skill-bx {
+  background: #151515;
+  border-radius: 15px;
+  text-align: center;
+  padding: 60px 50px;
+  margin-top: -60px;
+}
+.skill h2 {
+  font-size: 35px;
+  font-weight: 600;
+  color: #fff;
+}
+.skill p {
+    color: #B8B8B8;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    line-height: 1.5em;
+    margin: 14px 0 75px 0;
+}
+.skill-slider {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+.skill-slider .item img {
+  width: 50%;
+  margin: 0 auto 15px auto;
+}
+.background-image-left {
+  top: 28%;
+  position: absolute;
+  bottom: 0;
+  width: 40%;
+  z-index: -4;
+}
+/* Ajustes dos cards de tecnologia */
+.tech-card {
+  /* sem estilo por enquanto */
+}
+.tech-card p {
+  margin-bottom: 0 !important;
+  line-height: 1 !important;
+}
+.tech-card .text-blue-400.mb-1 {
+  margin-bottom: 2px !important;
+}
+.tech-card p.mt-1 {
+    margin-top: 2px !important;
+}
+
+/************ Projects Css ************/
+.project {
+  padding: 60px 0;
+  position: relative;
+  background-image: url('/assets/images/color-sharp2.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.project h2 {
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 30px;
+}
+.project p {
+  color: #B8B8B8;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin: 14px auto 30px auto;
+  text-align: center;
+  width: 56%;
+  max-width: 800px;
+}
+
+.project .proj-txtx span {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0.8px;
+    text-align: justify;
+}
+
+.project-cards-grid > div > p {
+    text-align: justify !important;
+    margin-left: 0;
+    margin-right: 0;
+    width: auto;
+    max-width: none;
+}
+
+.project .nav.nav-pills {
+  width: 72%;
+  margin: 0 auto;
+  border-radius: 50px;
+  background-color: rgb(255 255 255 / 10%);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px; /* Espaço abaixo das abas, se usadas */
+}
+.project .nav.nav-pills .nav-item {
+  width: 33.33333%;
+}
+.project .nav.nav-pills .nav-link {
+  background-color: transparent;
+  border-radius: 0;
+  padding: 17px 0;
+  color: #fff;
+  width: 100%;
+  font-size: 17px;
+  letter-spacing: 0.8px;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s ease-in-out;
+  text-align: center;
+  z-index: 0;
+  display: block;
+}
+.project .nav.nav-pills .nav-link::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.3s ease-in-out;
+}
+.project .nav.nav-pills .nav-link.active::before {
+    width: 100% !important;
+}
+.project .nav.nav-pills .nav-link.active {
+    border: 1px solid rgba(255, 255, 255, 1);
+}
+.nav-link#projects-tabs-tab-first {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 55px 0px 0px 55px;
+}
+.nav-link#projects-tabs-tab-second {
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+.nav-link#projects-tabs-tab-third {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 0 55px 55px 0;
+}
+.project-cards-grid {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Estilo para cada card de projeto individual */
+.proj-imgbx {
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-bottom: 24px;
+  background-color: #1a202c; /* Exemplo de fallback */
+}
+.proj-txtx { 
+  position: absolute;
+  text-align: center;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+  width: 100%;
+  z-index: 2;
+  color: #fff;
+}
+.proj-imgbx:hover .proj-txtx {
+  top: 50%;
+  opacity: 1;
+}
+.proj-txtx h4 {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1.1em;
+}
+.proj-txtx span {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.8px;
+}
+.background-image-right {
+  top: 20%;
+  position: absolute;
+  bottom: 0;
+  width: 35%;
+  right: 0;
+  z-index: -4;
+}
+
+/************ Contato e Rodapé ************/
+.contact-footer {
+  padding-top: 40px;
+  padding-bottom: 0;
+  position: relative;
+  background-image: url('/assets/images/color-sharp.png');
+  background-position: center bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #121212;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 80vh;
+}
+
+/* texto introdutório */
+.contact-intro-text {
+  color: #B8B8B8;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin-bottom: 40px;
+}
+
+/* Formulário */
+.contact-form-container {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 50px;
+}
+
+.contact-form-title {
+  color: #AA367C;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Estilo dos Inputs e Textarea */
+.contact-input,
+.contact-textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1); 
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  color: #fff;
+  padding: 14px 20px;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  transition: 0.3s ease-in-out;
+}
+
+.contact-input::placeholder,
+.contact-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  opacity: 0.8;
+}
+
+.contact-input:focus,
+.contact-textarea:focus {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #4A2FBD;
+  outline: none;
+}
+
+/* Estilo do Botão Enviar */
+.contact-submit-button {
+  font-weight: 700;
+  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  color: #fff;
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 8px;
+  transition: 0.3s ease-in-out;
+  border: none;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.contact-submit-button:hover {
+  background: linear-gradient(90.21deg, #4A2FBD -5.91%, #AA367C 111.58%);
+  color: #fff;
+}
+
+.copyright-info {
+  background-color: rgba(18, 18, 18, 0.7); 
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  color: #B8B8B8;
+  font-size: 14px;
+}
+.copyright-info p {
+  margin: 0;
+  line-height: 1.5;
+}
+.copyright-info .text-red-500 {
+  color: #ef4444;
+}
