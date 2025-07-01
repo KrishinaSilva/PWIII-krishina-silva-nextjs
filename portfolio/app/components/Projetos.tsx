@@ -45,7 +45,7 @@ export const Projetos = () => {
       <div className="container mx-auto px-6">
         <h2>Meus Projetos</h2>
         <p>
-            Aqui você encontrará uma seleção dos meus trabalhos mais recentes, que demonstram minhas habilidades e minha paixão pelo desenvolvimento web. Cada projeto é uma jornada de aprendizado e inovação.
+            Aqui você encontrará uma seleção dos meus trabalhos mais recentes, que demonstram minhas habilidades em desenvolvimento web e minha paixão pelas aplicações astronômicas.
         </p>
         
         <div className="project-cards-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8">
